@@ -16,23 +16,18 @@ var mruczek3 = new Cat("Bonifacy", 4, "miauu");
 var mruczek4 = new Cat("Bonifacy", 4, "miauu");
 
 
-var names = ["bartek", "magda", "paweł", "jan", "mateusz", "ala", "ola"];
-
-names.reduce(function (reduced, value, index, array) {
-
-    if (value.length < 4) {
-
-        reduced.shorterThan += 1;
-
-    }
-    else {
-
-        reduced.biggerThan += 1;
-
-    }
-
-    return reduced;
 
 
-}, {biggerThan: 0, shorterThan: 0});
+var dog={
+    sound:"pramiauu",
+    makesound: function (){console.log(this.sound)}
+};
+
+
+var dog1=Object.create(dog);
+
+dog1.sound="meoow";
+
+dog1.makesound();
+
 
